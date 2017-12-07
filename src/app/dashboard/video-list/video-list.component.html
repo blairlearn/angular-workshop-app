@@ -1,9 +1,7 @@
-<p>
-  video-list works!
-</p>
+<h3>Video List</h3>
 
-  <ul>
-    <li *ngFor="let video of videoData">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let video of videoData">
       {{video.title}}<br>
       by {{video.author}}
     </li>
