@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class VideoThumbnailComponent implements OnInit {
 
-  @Input() SelectedVideo: any[];
+  @Input("SelectedVideo") video : any[];
 
   constructor() {
    }
