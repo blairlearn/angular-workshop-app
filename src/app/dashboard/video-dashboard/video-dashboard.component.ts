@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoDashboardComponent implements OnInit {
 
+  CurrentVideo: any;
+
   constructor() { }
+
+  UpdateSelectedVideo(video){
+    console.log('selected a new video')
+    this.CurrentVideo = video
+  }
 
   ngOnInit() {
   }

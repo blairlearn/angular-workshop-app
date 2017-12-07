@@ -2,9 +2,13 @@
 
 <div class="row">
 
-<video-list class="col"></video-list>
+<video-list class="col"
+    (selectVideoEvent)="UpdateSelectedVideo($event)"
+></video-list>
 
-<video-player class="col"></video-player>
+<video-player class="col"
+    [SelectedVideo]="CurrentVideo"
+></video-player>
 
 <stat-filters class="col"></stat-filters>
 

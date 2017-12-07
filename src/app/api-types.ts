@@ -1,20 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
-@Component({
-  selector: 'video-list',
-  templateUrl: './video-list.component.html',
-  styleUrls: ['./video-list.component.css']
-})
-export class VideoListComponent implements OnInit {
 
-  selectedVideo: any;
-
-  @Output() selectVideoEvent = new EventEmitter<any>();
-
-  constructor() {
-   }
-
-  videoData = [
+fakeVideoData = [
     {
       "title": "Angular Observable Data Flow",
       "author": "Kyle Cordes",
@@ -181,14 +167,3 @@ export class VideoListComponent implements OnInit {
       ]
     }
   ]
-  
-  selectVideo(video) {
-    console.log("selecting " + video.title);
-    this.selectedVideo = video;
-    this.selectVideoEvent.emit(video);
-  }
-
-  ngOnInit() {
-  }
-
-}
