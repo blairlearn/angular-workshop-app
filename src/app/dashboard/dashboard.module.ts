@@ -5,6 +5,7 @@ import { VideoListComponent } from './video-list/video-list.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { StatFiltersComponent } from './stat-filters/stat-filters.component';
 import { VideoThumbnailComponent } from './video-thumbnail/video-thumbnail.component'
+import { HttpClientModule } from '@angular/common/http'
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -15,7 +16,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule
   ],
   declarations: [
     VideoDashboardComponent,
@@ -23,6 +25,9 @@ const routes: Routes = [
     VideoThumbnailComponent,
     VideoPlayerComponent,
     StatFiltersComponent
+  ],
+  providers: [
+    
   ]
 })
 export class DashboardModule { }
