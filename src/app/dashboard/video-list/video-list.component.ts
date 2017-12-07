@@ -7,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoListComponent implements OnInit {
 
-  constructor() { }
+  selectedVideo: any;
+
+  constructor() {
+   }
 
   videoData = [
     {
       "title": "Angular Observable Data Flow",
       "author": "Kyle Cordes",
       "id": "JPuqluYYa-o",
+      "IsSelected": false,
       "viewDetails": [
         {
           "age": 17,
@@ -46,6 +50,7 @@ export class VideoListComponent implements OnInit {
       "title": "Angular Live Coding",
       "author": "Kyle Cordes",
       "id": "CkK1BT6mMAw",
+      "IsSelected": false,
       "viewDetails": [
         {
           "age": 36,
@@ -78,6 +83,7 @@ export class VideoListComponent implements OnInit {
       "title": "Managing State in Angular",
       "author": "Kyle Cordes",
       "id": "eBLTz8QRg4Q",
+      "IsSelected": false,
       "viewDetails": [
         {
           "age": 17,
@@ -110,6 +116,7 @@ export class VideoListComponent implements OnInit {
       "title": "Modl Buildr",
       "author": "Paul Spears",
       "id": "4ENpTiHKyi4",
+      "IsSelected": false,
       "viewDetails": [
         {
           "age": 36,
@@ -142,6 +149,7 @@ export class VideoListComponent implements OnInit {
       "title": "ngConf 2015",
       "author": "Oasis Digital Solutions Inc.",
       "id": "NQOCQq6PLQg",
+      "IsSelected": false,
       "viewDetails": [
         {
           "age": 17,
@@ -172,6 +180,10 @@ export class VideoListComponent implements OnInit {
     }
   ]
   
+  selectVideo(video) {
+    console.log("selecting " + video.title);
+    this.selectedVideo = video;
+  }
 
   ngOnInit() {
   }

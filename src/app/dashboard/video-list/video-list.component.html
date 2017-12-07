@@ -1,7 +1,7 @@
 <h3>Video List</h3>
 
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let video of videoData">
+    <li class="list-group-item" *ngFor="let video of videoData;" [class.selected]="video == selectedVideo" (click)=selectVideo(video)>
       {{video.title}}<br>
       by {{video.author}}
     </li>

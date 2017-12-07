@@ -11,3 +11,8 @@ page-footer {
     border: 3px solid green;
     border-radius: 10px;
 }
+
+li.selected {
+    background-color: yellow;
+    color: red;
+}
