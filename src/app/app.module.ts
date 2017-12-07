@@ -11,7 +11,8 @@ import { FooterModule } from './footer-module/footer.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

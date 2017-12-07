@@ -3,7 +3,8 @@ app-root,
 video-dashboard,
 video-list,
 video-player,
-stat-filters {
+stat-filters,
+page-footer {
     display: block;
     padding: 10px;
     margin: 10px;
