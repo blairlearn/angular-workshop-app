@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import {Video} from './../../api-types'
+
 @Component({
   selector: 'video-thumbnail',
   templateUrl: './video-thumbnail.component.html',
@@ -7,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class VideoThumbnailComponent implements OnInit {
 
-  @Input("SelectedVideo") video : any[];
+  @Input("SelectedVideo") video : Video[];
 
   constructor() {
    }
