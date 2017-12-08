@@ -1,7 +1,7 @@
 <h3>Video List</h3>
 
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let video of videoData;" [class.selected]="video == selectedVideo" (click)=selectVideo(video)>
+    <li class="list-group-item" *ngFor="let video of videoData$ | async" [class.selected]="video == selectedVideo" (click)=selectVideo(video)>
       <video-thumbnail [SelectedVideo]="video"></video-thumbnail>
     </li>
   </ul>
