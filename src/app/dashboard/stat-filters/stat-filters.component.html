@@ -1,1 +1,36 @@
 <h3>Filters</h3>
+
+<h4>Region</h4>
+<form [formGroup]="videoFilterFormGroup" (ngSubmit)="saveFilterDetails()">
+
+    <div>
+        <label for="title">Title:</label>
+        <input id="title" type="text" formControlName="title">
+    </div>
+
+    <hr>
+
+    <div>
+        <p>
+            <input name="region" formControlName="region" value="north america" type="radio" id="region1">
+            <label for="region1">North America</label>
+        </p>
+        <p>
+            <input name="region" formControlName="region" value="south america" type="radio" id="region2">
+            <label for="region2">South America</label>
+        </p>
+        <p>
+            <input name="region" formControlName="region" value="mars" type="radio" id="region3">
+            <label for="region3">Mars</label>
+        </p>
+    </div>
+
+    <div>
+            <input type="checkbox" formControlName="mustcheck" name="mustcheck" id="mustcheck">
+            <label for="mustcheck">Please check this box!</label>
+            <div *ngIf="videoFilterFormGroup.get('mustcheck').hasError('required') && videoFilterFormGroup.get('mustcheck').touched">
+                You must check this box!                    
+            </div>
+    </div>
+        
+</form>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'stat-filters',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatFiltersComponent implements OnInit {
 
-  constructor() { }
+  videoFilterFormGroup: FormGroup;
+  
+  constructor(fb: FormBuilder) {
+    this.videoFilterFormGroup = fb.group({
+      title: [''],
+      region: ['north america'],
+      mustcheck: [false, Validators.requiredTrue]
+    })
+  }
 
   ngOnInit() {
   }
